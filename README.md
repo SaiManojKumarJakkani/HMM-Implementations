@@ -1,13 +1,13 @@
 # HMM-Implementations
-I have considered the following HMM definition for the implementation of Forward, Backward and Viterbi algorithms:
-Prior probabilities = [0.5, 0.5, 0.0]
-Transition Matrix = [[0.6, 0.4, 0.0],
-                     [0.3, 0.5, 0.2],
-                     [0.0, 0.1, 0.9]]
-Emission matrix = [[0.25, 0.25, 0.25, 0.25, 0.0, 0.0, 0.0, 0.0],
-                  [0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125],
-                  [0.0, 0.0, 0.0, 0.0, 0.0, 0.5, 0.5, 0.0]]
+Speech-Music classification using HMM:
+Here the data samples are audio files. The task is to classify the given audio file into Speech or Music class. Since the data samples are of time series data, so we used HMM model for the classification. The prior, tranisiton matrix and the emission matrix of the HMM model are learnt by training using training samples. Then using the learned model, when tried to classify test samples, it gave 0.89 accuracy score
        
 Likelihood estimation of a sample file:
 It contains the implementation of forward and backward algorithm from scratch. It is used to estimate the likelihood of a sample each from speech 
-and music files then reporting which file is more likely under the given HMM model
+and music class then reporting which file is more likely under the given HMM model
+
+Viterbi_algorithm:
+It the implementation of Viterbi_algorithm from scratch. It is used to give the hidden state sequence of a given sample based upon on the above HMM model
+
+
+
